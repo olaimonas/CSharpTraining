@@ -48,7 +48,7 @@ namespace DesktopCalculator
         private void executeBtn_Click(object sender, RoutedEventArgs e)
         {
             int part1num = int.Parse(part1);
-            int part2num = int.Parse(part2);
+            int part2num = int.Parse(part2);//
             if (action == "+")
             {
                 resultBox.Text = (part2num + part1num).ToString();
