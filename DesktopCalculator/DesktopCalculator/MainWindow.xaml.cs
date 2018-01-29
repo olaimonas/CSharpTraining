@@ -28,7 +28,7 @@ namespace DesktopCalculator
         {
             InitializeComponent();
         }
-        //Random comment
+        
         private void num1btn_Click(object sender, RoutedEventArgs e)
         {
             string buttonValue = ((Button)sender).Content.ToString();
