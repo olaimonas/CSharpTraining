@@ -1,0 +1,4 @@
+﻿2018-01-30
+1. Clear button
+2. Add more tests
+3. Validations for single action (no +-/* at once)
