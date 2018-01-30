@@ -25,14 +25,16 @@ namespace DesktopCalculator
                 case "/":
                     if (num2 != 0)
                     {
-                        result = (double)num1 / (double)num2;
-                        break;
+                        //result = (double)num1 / (double)num2;
+                        result = num1 / num2;
                     }
                     else
                     {
                         throw new DivideByZeroException();
                     }
                     break;
+                default:
+                    throw new Exception("Action not found!");
             }
                  return result;
         }
