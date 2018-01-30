@@ -24,7 +24,7 @@ namespace DesktopCalculator
             part1 = part1 + buttonValue;
         }
 
-        private void actionBtn_Click(object sender, RoutedEventArgs e)
+        private void action_Click(object sender, RoutedEventArgs e)
         {
             string buttonValue = ((Button)sender).Content.ToString();
             resultBox.Text = resultBox.Text + buttonValue;
