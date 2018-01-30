@@ -36,22 +36,21 @@ namespace DesktopCalculator
         private void executeBtn_Click(object sender, RoutedEventArgs e)
         {
             int part1num = int.Parse(part1);
-            int part2num = int.Parse(part2);//
-            if (action == "+")
+            int part2num = int.Parse(part2);
+            switch(action)
             {
-                resultBox.Text = (part2num + part1num).ToString();
-            }
-            else if (action == "-")
-            {
-                resultBox.Text = (part2num - part1num).ToString();
-            }
-            else if (action == "*")
-            {
-                resultBox.Text = (part2num * part1num).ToString();
-            }
-            else if (action == "/")
-            {
-                resultBox.Text = ((double)part2num / (double)part1num).ToString();
+                case "+":
+                    resultBox.Text = (part2num + part1num).ToString();
+                    break;
+                case "-":
+                    resultBox.Text = (part2num - part1num).ToString();
+                    break;
+                case "*":
+                    resultBox.Text = (part2num * part1num).ToString();
+                    break;
+                case "/":
+                    resultBox.Text = ((double)part2num / (double)part1num).ToString();
+                    break;
             }
 
             part1 = resultBox.Text;
