@@ -23,10 +23,18 @@ namespace DesktopCalculator
                     result = num1 * num2;
                     break;
                 case "/":
-                    result = (double)num1 / (double)num2;
+                    if (num2 != 0)
+                    {
+                        result = (double)num1 / (double)num2;
+                        break;
+                    }
+                    else
+                    {
+                        throw new DivideByZeroException();
+                    }
                     break;
             }
-            return result;
+                 return result;
         }
     }
 }
