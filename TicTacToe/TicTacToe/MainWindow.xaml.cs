@@ -12,12 +12,12 @@ namespace TicTacToe
         public MainWindow()
         {
             InitializeComponent();
-        }                  
+        }
 
         private Player _player = Player.O; // false - x, true - 0
-        private int[,] _matrix = new int[,] { 
-            { 0, 0, 0 }, 
-            { 0, 0, 0 }, 
+        private int[,] _matrix = new int[,] {
+            { 0, 0, 0 },
+            { 0, 0, 0 },
             { 0, 0, 0 }
         };
 
@@ -39,7 +39,7 @@ namespace TicTacToe
                 Player? winner = DetermineWinner();
                 if (winner != null)
                 {
-                    winnerLabel.Content = winner == Player.X ? "X" : "O" + " has won!"; 
+                    winnerLabel.Content = winner == Player.X ? "X" : "O" + " has won!";
                 }
 
                 ((Button)sender).Content = _player == Player.O ? "0" : "X";

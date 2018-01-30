@@ -1,17 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace DesktopCalculator
 {
@@ -22,13 +10,13 @@ namespace DesktopCalculator
     {
         private string part1 = "";
         private string part2 = "";
-        private string action; 
+        private string action;
 
         public MainWindow()
         {
             InitializeComponent();
         }
-        
+
         private void num1btn_Click(object sender, RoutedEventArgs e)
         {
             string buttonValue = ((Button)sender).Content.ToString();
@@ -65,8 +53,8 @@ namespace DesktopCalculator
             {
                 resultBox.Text = ((double)part2num / (double)part1num).ToString();
             }
-            
-            part1 = resultBox.Text; 
+
+            part1 = resultBox.Text;
         }
     }
 }

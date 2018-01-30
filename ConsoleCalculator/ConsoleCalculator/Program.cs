@@ -13,9 +13,9 @@ namespace ConsoleCalculator
             Console.WriteLine("Mano pirma programa! Koks tavo vardas?");
 
             string name = Console.ReadLine();
-            Console.WriteLine("Labas, " +                     name);
+            Console.WriteLine("Labas, " + name);
 
-            Console.ReadLine(); 
+            Console.ReadLine();
         }
     }
 }
