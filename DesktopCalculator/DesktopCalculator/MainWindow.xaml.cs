@@ -51,5 +51,11 @@ namespace DesktopCalculator
 
             part1 = resultBox.Text;
         }
+
+        private void clear(object sender, RoutedEventArgs e)
+        {
+            resultBox.Text = "";
+            action = "";
+        }
     }
 }

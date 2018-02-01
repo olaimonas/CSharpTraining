@@ -29,6 +29,7 @@
         <Button x:Name="num0btn" Content="0" HorizontalAlignment="Left" Margin="40,126,0,0" VerticalAlignment="Top" Width="25" Click="num1btn_Click"/>
         <Button x:Name="multiplicationBtn" Content="*" HorizontalAlignment="Left" Margin="108,99,0,0" VerticalAlignment="Top" Width="32" RenderTransformOrigin="0.919,1.232" Click="action_Click"/>
         <Button x:Name="divisionBtn" Content="/" HorizontalAlignment="Left" Margin="108,126,0,0" VerticalAlignment="Top" Width="32" RenderTransformOrigin="0.919,1.232" Click="action_Click"/>
+        <Button x:Name="clearBtn" Content="C" HorizontalAlignment="Left" Margin="71,126,0,0" VerticalAlignment="Top" Width="32" RenderTransformOrigin="0.919,1.232" Click="clear"/>
 
     </Grid>
 </Window>
