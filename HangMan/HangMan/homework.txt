@@ -1,0 +1,2 @@
+﻿1. Iskelti logika i atskiras klases ir parasyt joms testu.
+2. Patobulinti Start mygtuka.

@@ -94,6 +94,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="homework.txt" />
     <Content Include="words.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

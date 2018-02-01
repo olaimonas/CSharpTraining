@@ -27,6 +27,8 @@ namespace HangMan
         }
 
         private List<char> guessedLetters = new List<char>();
+        private String secretWord;
+        private int triesLeft = 6;
 
         private void StartBtn_Click(object sender, RoutedEventArgs e)
         {
@@ -34,7 +36,7 @@ namespace HangMan
 
             Random random = new Random();
             int randomIndex = random.Next(0, words.Length - 1);
-            string secretWord = words[randomIndex];
+            secretWord = words[randomIndex];
 
             secretWordLbl.Content = MaskWord(secretWord, guessedLetters);
         }
@@ -42,18 +44,48 @@ namespace HangMan
         private String MaskWord(String secretWord, List<char> letters)
         {
             String maskedWord = "";
-            foreach(char letter in secretWord)
+            foreach (char letter in secretWord)
             {
-                if(letters.Contains(letter))
+                if (letters.Contains(letter))
                 {
                     maskedWord += letter;
                 }
                 else
                 {
-                    maskedWord += "_" + " ";
+                    maskedWord += "__" + " ";
                 }
             }
             return maskedWord;
+        }
+
+        private void OnKeyUp(object sender, KeyEventArgs e)
+        {
+            char letter = e.Key.ToString().ToLower()[0];
+            bool correctLetter = secretWord.Contains(letter);
+
+            if (correctLetter && !guessedLetters.Contains(letter))
+            {
+
+                guessedLetters.Add(letter);
+
+                String maskedWord = MaskWord(secretWord, guessedLetters);
+                secretWordLbl.Content = maskedWord;
+                if (maskedWord.Replace(" ", "") == secretWord)
+                {
+                    winLoseLbl.Content = "You won!";
+                }
+
+            }
+            if(!correctLetter)
+            {
+                triesLeft -= 1;
+                tryCountLbl.Content = triesLeft;
+
+                if(triesLeft == 0)
+                {
+                    winLoseLbl.Content = "You lose!";
+                }
+            }
         }
     }
 }
